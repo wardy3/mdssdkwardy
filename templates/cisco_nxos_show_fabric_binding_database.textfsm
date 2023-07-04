@@ -1,0 +1,8 @@
+Value VSAN (\d+)
+Value LOGGING_IN_SWITCH_WWN ([0-9a-f:]+)
+Value DOMAIN_ID_HEX (0x[0-9a-f]+)
+Value DOMAIN_ID_DEC (\d+)
+Value DOMAIN_IS_LOCAL (\S+)
+
+Start
+  ^${VSAN}\s+${LOGGING_IN_SWITCH_WWN}\s+${DOMAIN_ID_HEX}\(${DOMAIN_ID_DEC}\)(\s+\[${DOMAIN_IS_LOCAL}\])? -> Record

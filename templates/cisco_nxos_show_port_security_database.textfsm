@@ -1,0 +1,13 @@
+Value VSAN (\d+)
+Value LOGGING_IN_ENTITY ([0-9a-f:]+|Any)
+Value WWN_TYPE (swwn|pwwn)
+Value LOGGING_IN_POINT ([0-9a-f:]+)
+Value INTERFACE (\S+)
+
+
+
+Start
+  ^${VSAN}\s+${LOGGING_IN_ENTITY}\(${WWN_TYPE}\)\s+${LOGGING_IN_POINT}\(${INTERFACE}\) -> Record
+  ^${VSAN}\s+${LOGGING_IN_ENTITY}\s+${LOGGING_IN_POINT}\(${INTERFACE}\) -> Record
+
+

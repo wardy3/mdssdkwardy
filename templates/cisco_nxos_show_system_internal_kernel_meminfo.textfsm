@@ -1,0 +1,6 @@
+Value MEMTYPE (\S+)
+Value VALUE (\S+)
+Value UNITS (kB|Pages)
+
+Start
+  ^${MEMTYPE}:\s*${VALUE}(\s*${UNITS})? -> Record
